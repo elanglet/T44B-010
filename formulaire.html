@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire HTML</title>
+</head>
+
+<body style="font-family: Calibri;">
+    <form action="saisie.php" method="post">
+
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" value="" size="20" />
+        </div>
+        <div>
+            <label for="nom">Mot de passe :</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" />
+        </div>
+
+        <div>
+            <fieldset>
+                <legend>Sexe : </legend>
+                <input type="radio" id="sexeM" name="sexe" value="M" />
+                <label for="sexeM">Masculin</label>
+                <input type="radio" id="sexeF" name="sexe" value="F" />
+                <label for="sexeM">Féminin</label>    
+                <input type="radio" id="sexeI" name="sexe" value="?" checked="checked" />
+                <label for="sexeM">Ne sait pas</label>
+            </fieldset>
+        </div>
+
+        <div>
+            <label for="sexeM">Photo : </label>
+            <input type="file" id="photo" name="photo" size="50" />
+        </div>
+
+        <div>    
+            <fieldset>
+                <legend>Couleurs préférées : </legend>
+                <input type="checkbox" id="bleu" name="couleurs[bleu]" />
+                <label for="bleu">Bleu</label>
+                <input type="checkbox" id="blanc" name="couleurs[blanc]" />
+                <label for="blanc">Blanc</label>
+                <input type="checkbox" id="rouge" name="couleurs[rouge]" />
+                <label for="rouge">Rouge</label>
+                <input type="checkbox" id="pas" name="couleurs[pas]" checked="checked" />
+                <label for="rouge">Rouge</label>
+            </fieldset>
+        </div>
+
+        <div>
+            <label for="langue">Langue : </label>
+            <select id="langue" name="langue">
+                <option value="E">Espagnol</option>
+                <option value="F" selected="selected">Francais</option>
+                <option value="I">Italien</option>
+            </select>
+        </div>
+
+        <div>    
+            <label for="fruits">Fruits préférés : </label>
+            <select id="fruits" name="fruits[]" multiple="multiple" size="8">
+                <option value="A">Abricots</option>
+                <option value="C">Cerises</option>
+                <option value="F">Fraises</option>
+                <option value="P">Pêches</option>
+                <option value="?" selected="selected">Ne sait pas</option>
+            </select>
+        </div>
+
+        <div>   
+            <label for="commentaire">Commentaire : </label>
+            <textarea id="commentaire" name="commentaire" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>    
+            <input type="hidden" id="invisible" name="invisible" value="123" />
+        </div>
+
+        <div>
+            <button type="submit" id="soumettre" name="soumettre">OK</button>
+            <button type="reset" id="effacer" name="effacer">Effacer</button>
+            <button type="button" id="action" name="action">Ne fait rien</button>
+            <button type="button" id="valider" name="valider">
+                <img alt="valider" src="valider.png" />                
+            </button>            
+        </div>
+
+    </form>
+</body>
+
+</html>
